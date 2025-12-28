@@ -33,13 +33,13 @@ def create_presentation_pdf(filename):
     Story.append(Spacer(1, 24))
 
     # 1. Problema orçamentário
-    Story.append(Paragraph("1. Problema Orçamentário", styles['SectionHeader']))
+    Story.append(Paragraph("1. Problema Orçamentário Claramente Delimitado", styles['SectionHeader']))
     text_problem = """
-    A gestão orçamentária pública enfrenta desafios críticos como a <b>fragmentação de dados</b>, 
-    a <b>complexidade legislativa</b> (milhares de páginas de LOA, LDO e Notas Técnicas) e a 
-    <b>dificuldade de auditoria em tempo real</b>. Atualmente, a identificação de riscos e 
-    inconsistências depende de revisão manual exaustiva, lenta e propensa a erros humanos, 
-    comprometendo a previsibilidade e a eficiência do gasto público.
+    A <b>gestão pública</b> enfrenta desafios críticos como a <b>fragmentação de dados</b>, 
+    a complexidade legislativa e a dificuldade de auditoria tempestiva. A falta de ferramentas modernas 
+    gera baixa previsibilidade e dificulta o <b>controle social</b>. O problema central é a incapacidade 
+    de processar o volume massivo de documentos orçamentários (LOA, LDO) em tempo hábil para evitar 
+    desperdícios, resultando em ineficiência e riscos fiscais.
     """
     Story.append(Paragraph(text_problem, styles['Justify']))
     Story.append(Spacer(1, 12))
@@ -49,29 +49,20 @@ def create_presentation_pdf(filename):
     
     Story.append(Paragraph("Arquitetura e Tecnologias", styles['SubSection']))
     text_arch = """
-    A solução é uma plataforma web baseada em <b>Agentes de Inteligência Artificial Generativa (LLMs)</b>.
-    Utiliza o modelo <b>Google Gemini 2.0 Flash</b> pela sua alta capacidade de contexto e raciocínio lógico.
-    A arquitetura é modular, composta por:
+    A solução é uma plataforma de <b>Auditoria Inteligente</b> baseada em Agentes Autônomos. 
+    <b>Tecnologias usadas:</b> Inteligência Artificial Generativa (LLM Google Gemini 2.0 Flash), 
+    Processamento de Linguagem Natural (NLP), automação em Python e dashboards interativos (Streamlit).
     """
     Story.append(Paragraph(text_arch, styles['Justify']))
-    
-    bullet_list = ListFlowable([
-        ListItem(Paragraph("<b>AuditorAgent:</b> Identifica riscos fiscais e impropriedades.", styles['Normal'])),
-        ListItem(Paragraph("<b>ComplianceAgent:</b> Verifica aderência à LRF e Constituição.", styles['Normal'])),
-        ListItem(Paragraph("<b>ConsistencyAgent:</b> Valida integridade numérica e lógica.", styles['Normal'])),
-        ListItem(Paragraph("<b>ExplainabilityAgent:</b> Traduz achados técnicos para linguagem cidadã.", styles['Normal'])),
-        ListItem(Paragraph("<b>Orchestrator:</b> Coordena a execução paralela dos agentes.", styles['Normal'])),
-    ], bulletType='bullet', start='circle')
-    Story.append(bullet_list)
-    Story.append(Spacer(1, 12))
+    Story.append(Spacer(1, 6))
 
     Story.append(Paragraph("Fluxo de Funcionamento", styles['SubSection']))
     text_flow = """
-    1. O usuário faz upload do PDF (ex: Projeto de Lei Orçamentária).<br/>
-    2. O sistema extrai o texto e o distribui para os agentes especializados.<br/>
-    3. Cada agente analisa o documento sob sua ótica (risco, lei, matemática).<br/>
-    4. O Orchestrator consolida os resultados.<br/>
-    5. A interface Streamlit apresenta um painel interativo com alertas e relatórios.
+    1. <b>Upload:</b> Gestor ou cidadão envia o arquivo (PDF da Lei Orçamentária).<br/>
+    2. <b>Processamento:</b> O sistema extrai dados não estruturados.<br/>
+    3. <b>Agentes de IA:</b> Quatro agentes especializados analisam riscos, auditoria, compliance e consistência.<br/>
+    4. <b>Orquestração:</b> Consolidação dos achados.<br/>
+    5. <b>Visualização:</b> Apresentação amigável para tomada de decisão.
     """
     Story.append(Paragraph(text_flow, styles['Justify']))
     Story.append(Spacer(1, 12))
@@ -79,14 +70,9 @@ def create_presentation_pdf(filename):
     # 3. Demonstração de Funcionalidade
     Story.append(Paragraph("3. Demonstração de Funcionalidade", styles['SectionHeader']))
     text_demo = """
-    <b>O que já funciona hoje (MVP):</b><br/>
-    - Upload e leitura de PDFs orçamentários.<br/>
-    - Análise completa via API do Google Gemini (Agentes ativos).<br/>
-    - Identificação automática de déficits e violações da LRF.<br/>
-    - Geração de explicação didática para leigos.<br/><br/>
-    <b>Protótipo Avançado:</b><br/>
-    - Integração com bases de dados do SIAFI (planejado).<br/>
-    - Ajuste fino (Fine-tuning) com histórico de pareceres do TCU.
+    A solução possui foco total em <b>demonstração prática</b> e usabilidade:<br/><br/>
+    <b>O que já funciona hoje:</b> Leitura de documentos, identificação de riscos orçamentários, validação da LRF e geração de relatórios simplificados.<br/>
+    <b>O que está em protótipo avançado:</b> Cruzamento de dados com bases do SIAFI e análise preditiva de receitas.
     """
     Story.append(Paragraph(text_demo, styles['Justify']))
     Story.append(Spacer(1, 12))
@@ -95,26 +81,32 @@ def create_presentation_pdf(filename):
     Story.append(Paragraph("4. Impacto Esperado", styles['SectionHeader']))
     
     impact_items = ListFlowable([
-        ListItem(Paragraph("<b>Transparência:</b> Permite que qualquer cidadão 'audite' o orçamento e entenda seus riscos.", styles['Normal'])),
-        ListItem(Paragraph("<b>Eficiência:</b> Reduz o tempo de primeira análise de dias para segundos.", styles['Normal'])),
-        ListItem(Paragraph("<b>Controle Social:</b> Empodera conselhos e ONGs com pareceres técnicos automáticos.", styles['Normal'])),
-        ListItem(Paragraph("<b>Apoio à Decisão:</b> Gestores recebem alertas preventivos antes da execução da despesa.", styles['Normal'])),
+        ListItem(Paragraph("<b>Transparência:</b> Traduz o 'economês' para linguagem simples, ampliando o entendimento do cidadão.", styles['Normal'])),
+        ListItem(Paragraph("<b>Eficiência:</b> Reduz meses de trabalho manual de auditoria para poucos segundos.", styles['Normal'])),
+        ListItem(Paragraph("<b>Controle Social:</b> Gera alto <b>impacto social</b> ao empoderar a sociedade com dados auditados.", styles['Normal'])),
+        ListItem(Paragraph("<b>Apoio à Decisão:</b> Fornece insumos técnicos rápidos para gestores corrigirem rumos.", styles['Normal'])),
     ], bulletType='bullet', start='circle')
     Story.append(impact_items)
     Story.append(Spacer(1, 12))
 
     # 5. Viabilidade
-    Story.append(Paragraph("5. Viabilidade e Aderência", styles['SectionHeader']))
+    Story.append(Paragraph("5. Viabilidade", styles['SectionHeader']))
     text_viab = """
-    <b>Infraestrutura Comum:</b> Roda em nuvem padrão (Streamlit Cloud, AWS, GCP) sem necessidade de GPUs dedicadas (uso de API).<br/>
-    <b>Software Livre:</b> Desenvolvido em Python (Open Source).<br/>
-    <b>Aderência ao Ciclo:</b> Atua transversalmente no Planejamento (análise da LOA/LDO) e na Avaliação (relatórios de gestão).
+    <b>Execução em infraestrutura comum:</b> A solução roda 100% em nuvem (SaaS), acessível de qualquer navegador, sem custos com servidores físicos.<br/>
+    <b>Uso de software livre:</b> Todo o código base é Open Source (Python/Streamlit).<br/>
     """
     Story.append(Paragraph(text_viab, styles['Justify']))
+    Story.append(Spacer(1, 6))
+
+    Story.append(Paragraph("Aderência ao ciclo orçamentário", styles['SubSection']))
+    text_cycle = """
+    A ferramenta adere perfeitamente às fases de <b>Planejamento</b> (análise prévia da LOA) e <b>Avaliação</b> (auditoria de contas), fortalecendo a governança pública.
+    """
+    Story.append(Paragraph(text_cycle, styles['Justify']))
     
     # Footer info
     Story.append(Spacer(1, 36))
-    Story.append(Paragraph("Documento gerado automaticamente pelo Auditor Orçamento", styles['Italic']))
+    Story.append(Paragraph("Documento técnico gerado automaticamente para o 14º Prêmio SOF", styles['Italic']))
 
     doc.build(Story)
 
