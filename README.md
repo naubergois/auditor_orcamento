@@ -12,29 +12,6 @@ O objetivo é aumentar a **transparência**, a **eficiência do gasto público**
 
 Para detalhes profundos sobre a implementação, consulte o **[Documento Técnico Completo](DOCUMENTO_TECNICO.md)**.
 
-### 📂 Detalhamento da Apresentação
-Abaixo, os módulos detalhados que compõem a apresentação do projeto:
-
-- [01. Título da Solução](apresentacao/01_titulo_solucao.md)
-- [02. Problema Orçamentário](apresentacao/02_problema_orcamentario.md)
-- [03. Descrição da Solução](apresentacao/03_descricao_solucao.md)
-- [04. Arquitetura](apresentacao/04_arquitetura.md)
-- [05. Tecnologias Usadas](apresentacao/05_tecnologias_usadas.md)
-- [06. Fluxo de Funcionamento](apresentacao/06_fluxo_funcionamento.md)
-- [07. Demonstração de Funcionalidade](apresentacao/07_demonstracao_funcionalidade.md)
-- [08. O que já funciona](apresentacao/08_o_que_ja_funciona.md)
-- [09. Protótipo Avançado](apresentacao/09_prototipo_avancado.md)
-- [10. Impacto Esperado](apresentacao/10_impacto_esperado.md)
-- [11. Transparência](apresentacao/11_transparencia.md)
-- [12. Eficiência](apresentacao/12_eficiencia.md)
-- [13. Controle Social](apresentacao/13_controle_social.md)
-- [14. Apoio à Decisão](apresentacao/14_apoio_decisao.md)
-- [15. Viabilidade](apresentacao/15_viabilidade.md)
-- [16. Execução em Infra Comum](apresentacao/16_execucao_infra_comum.md)
-- [17. Software Livre](apresentacao/17_software_livre.md)
-- [18. Aderência ao Ciclo Orçamentário](apresentacao/18_aderencia_ciclo_orcamentario.md)
-- [19. Planejamento e Avaliação](apresentacao/19_planejamento_execucao_monitoramento_avaliacao.md)
-
 
 O sistema utiliza uma arquitetura de múltiplos agentes, orquestrada para simular uma equipe de auditoria:
 
@@ -156,3 +133,26 @@ Siga os passos de instalação abaixo para rodar em sua máquina.
 - A análise depende da qualidade da extração de texto do PDF.
 - A precisão das análises legais depende do contexto fornecido ao modelo (prompt engineering).
 - Para uso em produção, recomenda-se fina sintonia (RAG - Retrieval Augmented Generation) com a base completa de leis.
+
+### 📂 Detalhamento da Apresentação
+Abaixo, os módulos detalhados que compõem a apresentação do projeto:
+
+- [01. Título da Solução](apresentacao/01_titulo_solucao.md)
+- [02. Problema Orçamentário](apresentacao/02_problema_orcamentario.md)
+- [03. Descrição da Solução](apresentacao/03_descricao_solucao.md)
+- [04. Arquitetura](apresentacao/04_arquitetura.md)
+- [05. Tecnologias Usadas](apresentacao/05_tecnologias_usadas.md)
+- [06. Fluxo de Funcionamento](apresentacao/06_fluxo_funcionamento.md)
+- [07. Demonstração de Funcionalidade](apresentacao/07_demonstracao_funcionalidade.md)
+- [08. O que já funciona](apresentacao/08_o_que_ja_funciona.md)
+- [09. Protótipo Avançado](apresentacao/09_prototipo_avancado.md)
+- [10. Impacto Esperado](apresentacao/10_impacto_esperado.md)
+- [11. Transparência](apresentacao/11_transparencia.md)
+- [12. Eficiência](apresentacao/12_eficiencia.md)
+- [13. Controle Social](apresentacao/13_controle_social.md)
+- [14. Apoio à Decisão](apresentacao/14_apoio_decisao.md)
+- [15. Viabilidade](apresentacao/15_viabilidade.md)
+- [16. Execução em Infra Comum](apresentacao/16_execucao_infra_comum.md)
+- [17. Software Livre](apresentacao/17_software_livre.md)
+- [18. Aderência ao Ciclo Orçamentário](apresentacao/18_aderencia_ciclo_orcamentario.md)
+- [19. Planejamento e Avaliação](apresentacao/19_planejamento_execucao_monitoramento_avaliacao.md)
