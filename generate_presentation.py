@@ -64,26 +64,85 @@ def create_presentation_pdf(filename):
     Story = []
     
     # --- CAPA ---
-    Story.append(Spacer(1, 100))
-    logo = get_image_with_aspect("logo.png", 200)
+    Story.append(Spacer(1, 60))  # Reduced from 100
+    logo = get_image_with_aspect("logo.png", 180) # Slightly smaller logo max height
     if logo:
         Story.append(logo)
-        Story.append(Spacer(1, 40))
+        Story.append(Spacer(1, 30))
 
     title = "AUDITOR ORÇAMENTO (SOF)"
     Story.append(Paragraph(title, styles['Title']))
     
     subtitle = "Auditoria Inteligente e Controle Social com Agentes Autônomos de IA"
     Story.append(Paragraph(subtitle, styles['Heading2']))
-    Story.append(Spacer(1, 150))
+    Story.append(Spacer(1, 80))  # Reduced from 150
     
     context = "MEMORIAL TÉCNICO DESCRITIVO"
     category = "14º Prêmio SOF de Monografias - Categoria: Soluções em Dados Orçamentários"
     Story.append(Paragraph(context, styles['Heading3']))
     Story.append(Paragraph(category, styles['Heading3']))
     
-    Story.append(Spacer(1, 100))
+    Story.append(Spacer(1, 60)) # Reduced from 100
     Story.append(Paragraph("Versão Final Estendida - Dezembro de 2025", styles['Normal']))
+    
+    # Links na Capa (Solicitado)
+    Story.append(Spacer(1, 20))
+    Story.append(Paragraph("<b>Repositório GitHub:</b> <a href='https://github.com/naubergois/auditor_orcamento' color='blue'>github.com/naubergois/auditor_orcamento</a>", styles['Normal']))
+    Story.append(Paragraph("<b>Aplicação Online:</b> <a href='https://auditororcamento.streamlit.app' color='blue'>auditororcamento.streamlit.app</a>", styles['Normal']))
+
+    Story.append(PageBreak())
+
+    # --- NOVA PÁGINA: Como Acessar e Utilizar ---
+    Story.append(Paragraph("Acesso ao Código e Aplicação", styles['SectionHeader']))
+    
+    Story.append(Paragraph("""
+    Para garantir a total reprodutibilidade e transparência desta solução, disponibilizamos o código-fonte completo e uma versão de demonstração online acessível publicamente.
+    """, styles['Justify']))
+
+    Story.append(Paragraph("1. Aplicação Online (SaaS)", styles['SubSection']))
+    Story.append(Paragraph("""
+    A ferramenta está implantada em nuvem e pode ser testada imediatamente, sem necessidade de instalação.
+    <br/><br/>
+    <b>🔗 Link de Acesso:</b> <a href='https://auditororcamento.streamlit.app' color='blue'>https://auditororcamento.streamlit.app</a>
+    """, styles['Justify']))
+    Story.append(Paragraph("Basta acessar o link, fazer o upload de um arquivo PDF (ex: LOA ou LDO) e clicar em 'Executar Auditoria'. O sistema processará o documento em tempo real.", styles['Normal']))
+
+    Story.append(Paragraph("2. Repositório de Código (Open Source)", styles['SubSection']))
+    Story.append(Paragraph("""
+    Todo o código-fonte, incluindo os prompts dos agentes e scripts de orquestração, está auditável no GitHub.
+    <br/><br/>
+    <b>🔗 GitHub:</b> <a href='https://github.com/naubergois/auditor_orcamento' color='blue'>https://github.com/naubergois/auditor_orcamento</a>
+    """, styles['Justify']))
+    
+    Story.append(Paragraph("No repositório, você encontrará:", styles['Normal']))
+    Story.append(Paragraph("• <code>app.py</code>: Código da interface gráfica (Streamlit).", styles['Bullet']))
+    Story.append(Paragraph("• <code>agents/</code>: Lógica dos agentes de IA (Auditor, Compliance, etc).", styles['Bullet']))
+    Story.append(Paragraph("• <code>DOCUMENTO_TECNICO.md</code>: Documentação profunda da arquitetura.", styles['Bullet']))
+    Story.append(Paragraph("• <code>README.md</code>: Instruções passo a passo de instalação local.", styles['Bullet']))
+
+    Story.append(PageBreak())
+
+    # --- NOVA PÁGINA: Vídeos Demonstrativos ---
+    Story.append(Paragraph("Vídeos Demonstrativos", styles['SectionHeader']))
+    
+    Story.append(Paragraph("""
+    Além do código e da aplicação em tempo real, disponibilizamos vídeos detalhados que ilustram tanto o funcionamento prático da ferramenta quanto a fundamentação teórica do projeto.
+    """, styles['Justify']))
+
+    Story.append(Paragraph("1. Tutorial Prático (Demo)", styles['SubSection']))
+    Story.append(Paragraph("""
+    Demonstração completa da navegação, upload de arquivos e visualização dos pareceres dos agentes.
+    <br/><br/>
+    <b>🎥 Assistir / Baixar:</b> <a href='https://github.com/naubergois/auditor_orcamento/raw/main/Comousar.mp4' color='blue'>Comousar.mp4</a>
+    """, styles['Justify']))
+
+    Story.append(Paragraph("2. Explicação Conceitual e Impacto", styles['SubSection']))
+    Story.append(Paragraph("""
+    Vídeo explicativo detalhando a arquitetura de agentes, escolhas tecnológicas e o impacto social da solução.
+    <br/><br/>
+    <b>🎥 Assistir / Baixar:</b> <a href='https://github.com/naubergois/auditor_orcamento/raw/main/ExplicacaoAplicacao.mp4' color='blue'>ExplicacaoAplicacao.mp4</a>
+    """, styles['Justify']))
+
     Story.append(PageBreak())
 
     # --- SUMÁRIO (Simulado) ---
