@@ -1,4 +1,4 @@
-![Auditor Orçamento Banner](app_banner.png)
+![Auditor Orçamento Banner](banner.png)
 
 # 🛡️ Auditor de Orçamento com IA Generativa (SOF)
 
