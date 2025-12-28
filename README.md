@@ -1,5 +1,6 @@
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://auditororcamento.streamlit.app)
+**Acesse online:** [https://auditororcamento.streamlit.app](https://auditororcamento.streamlit.app)
 
 # 🛡️ Auditor de Orçamento com IA Generativa (SOF)
 
