@@ -1,6 +1,3 @@
-# Auditor Orçamento - 14º Prêmio SOF 🏆
-
-![Logo](logo.png)
 ![Auditor Orçamento Banner](app_banner.png)
 
 # 🛡️ Auditor de Orçamento com IA Generativa (SOF)
