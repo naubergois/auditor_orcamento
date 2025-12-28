@@ -1,4 +1,5 @@
-![Auditor Orçamento Banner](banner.png)
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://auditororcamento.streamlit.app)
 
 # 🛡️ Auditor de Orçamento com IA Generativa (SOF)
 
@@ -136,7 +137,10 @@ Siga os passos de instalação abaixo para rodar em sua máquina.
 
 ### 🎓 Sobre o Autor
 
-O autor do projeto é Doutor na área (ou qualificação relevante), reforçando a base científica da proposta.
+**Francisco Nauber Bernardo Gois**
+Doutor em [Área de Formação]. Auditor de Controle Externo e Especialista em Tecnologia da Informação.
+Possui vasta experiência em Finanças Públicas, Ciência de Dados e Inteligência Artificial aplicada à Gestão Pública.
+
 - **[Visualizar Diploma de Doutorado](https://github.com/naubergois/auditor_orcamento/raw/main/4.DiplomaDoutorado.pdf)**
 
 ### 📂 Detalhamento da Apresentação
