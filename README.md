@@ -101,7 +101,7 @@ streamlit run app.py
 
 ## 🎥 Vídeo de Demonstração
 
-Assista ao vídeo mostrando o uso da ferramenta: [Baixar/Assistir Vídeo (MP4)](https://github.com/naubergois/auditor_orcamento/raw/main/Comousar.mp4)
+Assista ao vídeo explicativo detalhando o funcionamento e o impacto da ferramenta: [Baixar/Assistir Vídeo Explicativo (MP4)](https://github.com/naubergois/auditor_orcamento/raw/main/ExplicacaoAplicacao.mp4)
 
 ### Interface da Aplicação
 
