@@ -137,9 +137,13 @@ Siga os passos de instalação abaixo para rodar em sua máquina.
 
 ### 🎓 Sobre o Autor
 
-**Francisco Nauber Bernardo Gois**
-Doutor em [Área de Formação]. Auditor de Controle Externo e Especialista em Tecnologia da Informação.
-Possui vasta experiência em Finanças Públicas, Ciência de Dados e Inteligência Artificial aplicada à Gestão Pública.
+**Francisco Nauber Bernardo Góis**
+
+Auditor de Controle Interno, doutor em Informática Aplicada, com pós-doutorado em Inteligência Artificial e Neurociência pela University of Saint Joseph (USJ), Macau (China). Atua nas áreas de ciência de dados, inteligência artificial e auditoria governamental, com foco no desenvolvimento de soluções analíticas e sistemas inteligentes aplicados ao controle da gestão pública, orçamento público, transparência e governança.
+
+Possui experiência no desenho e implementação de pipelines de dados, modelos de aprendizado de máquina e arquiteturas baseadas em agentes de IA, aplicadas à análise de leis orçamentárias, verificação de conformidade legal, detecção de riscos fiscais e apoio à tomada de decisão. Desenvolve projetos voltados à modernização do controle interno, uso estratégico de dados públicos e inovação no setor público.
+
+Atua também em atividades acadêmicas e de pesquisa, com experiência na integração entre inteligência artificial, análise de dados e políticas públicas, participando de projetos de pesquisa aplicada e iniciativas de inovação tecnológica na administração pública.
 
 - **[Visualizar Diploma de Doutorado](https://github.com/naubergois/auditor_orcamento/raw/main/4.DiplomaDoutorado.pdf)**
 
