@@ -10,6 +10,9 @@ O objetivo é aumentar a **transparência**, a **eficiência do gasto público**
 
 ## 🏗️ Arquitetura
 
+Para detalhes profundos sobre a implementação, consulte o **[Documento Técnico Completo](DOCUMENTO_TECNICO.md)**.
+
+
 O sistema utiliza uma arquitetura de múltiplos agentes, orquestrada para simular uma equipe de auditoria:
 
 1.  **AuditorAgent**: Focado em identificar riscos fiscais e contas que não fecham.
@@ -99,6 +102,27 @@ streamlit run app.py
 ## 🎥 Vídeo de Demonstração
 
 Assista ao vídeo mostrando o uso da ferramenta: [Baixar/Assistir Vídeo (MP4)](https://github.com/naubergois/auditor_orcamento/raw/main/Comousar.mp4)
+
+### Interface da Aplicação
+
+Abaixo, algumas capturas de tela da aplicação em funcionamento (geradas automaticamente via Selenium):
+
+**Tela Inicial:**
+![Tela Inicial](screenshot_home.png)
+
+**Resultados da Auditoria:**
+![Resultados da Auditoria](screenshot_results.png)
+
+## 🌐 Acesso à Aplicação
+
+### Online (Streamlit Cloud)
+A aplicação está disponível publicamente para testes e avaliação. 
+**[Clique aqui para acessar o Auditor Orçamento](https://auditororcamento.streamlit.app)**
+*(Caso o link esteja indisponível, verifique a seção de deploy abaixo ou entre em contato)*
+
+### Localmente
+Siga os passos de instalação abaixo para rodar em sua máquina.
+
 
 ## ⚠️ Limitações do Protótipo
 
