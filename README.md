@@ -134,6 +134,11 @@ Siga os passos de instalação abaixo para rodar em sua máquina.
 - A precisão das análises legais depende do contexto fornecido ao modelo (prompt engineering).
 - Para uso em produção, recomenda-se fina sintonia (RAG - Retrieval Augmented Generation) com a base completa de leis.
 
+### 🎓 Sobre o Autor
+
+O autor do projeto é Doutor na área (ou qualificação relevante), reforçando a base científica da proposta.
+- **[Visualizar Diploma de Doutorado](https://github.com/naubergois/auditor_orcamento/raw/main/4.DiplomaDoutorado.pdf)**
+
 ### 📂 Detalhamento da Apresentação
 Abaixo, os módulos detalhados que compõem a apresentação do projeto:
 
