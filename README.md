@@ -1,6 +1,9 @@
 # Auditor Orçamento - 14º Prêmio SOF 🏆
 
-## Solução de Auditoria Orçamentária com IA Generativa
+![Logo](logo.png)
+![Auditor Orçamento Banner](app_banner.png)
+
+# 🛡️ Auditor de Orçamento com IA Generativa (SOF)
 
 Este projeto apresenta uma plataforma funcional de auditoria de documentos orçamentários (LOA, LDO, Notas Técnicas) utilizando **Agentes de Inteligência Artificial** (Google Gemini).
 
@@ -14,8 +17,21 @@ O sistema utiliza uma arquitetura de múltiplos agentes, orquestrada para simula
 
 1.  **AuditorAgent**: Focado em identificar riscos fiscais e contas que não fecham.
 2.  **ComplianceAgent**: Verifica a aderência à LRF (Lei de Responsabilidade Fiscal) e Constituição.
-3.  **ConsistencyAgent**: Cruza dados numéricos buscando erros de soma ou lógica.
 4.  **ExplainabilityAgent**: Traduz os achados técnicos (economês) para linguagem clara.
+
+### Diagrama Visual
+O fluxo de trabalho foi desenhado para evitar alucinações de IA e garantir consistência:
+
+1.  **Orchestrator**: Recebe o texto e decide quais agentes acionar.
+2.  **Agentes Paralelos**: Auditoria, Compliance e Consistência rodam simultaneamente para performance.
+3.  **Explainability**: Consolida os resultados técnicos em linguagem natural.
+
+### Detalhamento Técnico
+- **Frontend**: Streamlit (Python) - Interface limpa e reativa.
+- **Backend AI**: Agentes autônomos consumindo Google Gemini 2.0 via API.
+- **Arquitetura**: Micro-agentes independentes, cada um com *prompts* especializados (System Instructions).
+
+![Arquitetura](architecture_didactic.png)
 
 ## 🚀 Como Rodar Localmente
 
@@ -82,6 +98,10 @@ streamlit run app.py
 3. Clique em **"Carregar Exemplo"** (se escolheu o mock).
 4. Clique no botão **"Executar Auditoria Inteligente"**.
 5. Aguarde a análise e explore as abas de resultados.
+
+## 🎥 Vídeo de Demonstração
+
+Assista ao vídeo mostrando o uso da ferramenta: [Comousar.mp4](Comousar.mp4)
 
 ## ⚠️ Limitações do Protótipo
 

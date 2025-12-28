@@ -1,8 +1,21 @@
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem, Image, PageBreak
+from reportlab.lib.colors import HexColor
 from reportlab.lib.enums import TA_JUSTIFY, TA_LEFT
+from PIL import Image as PILImage
+import os
+
+def get_image_with_aspect(path, target_width):
+    if not os.path.exists(path):
+        return None
+    try:
+        img = PILImage.open(path)
+        w, h = img.size
+        return Image(path, width=target_width, height=target_width * h / w)
+    except:
+        return None
 
 def create_presentation_pdf(filename):
     doc = SimpleDocTemplate(filename, pagesize=A4,
@@ -23,6 +36,12 @@ def create_presentation_pdf(filename):
 
     Story = []
     
+    # Logo
+    logo = get_image_with_aspect("logo.png", 120)
+    if logo:
+        Story.append(logo)
+        Story.append(Spacer(1, 12))
+
     # Title
     title = "AUDITOR ORÇAMENTO: Auditoria Inteligente com Agentes Autônomos"
     Story.append(Paragraph(title, styles['Title']))
@@ -55,6 +74,13 @@ def create_presentation_pdf(filename):
     """
     Story.append(Paragraph(text_arch, styles['Justify']))
     Story.append(Spacer(1, 6))
+
+    # 2.1 Visual Architecture Slide
+    Story.append(Paragraph("Arquitetura Visual", styles['SubSection']))
+    im_arch = get_image_with_aspect("architecture_didactic.png", 500)
+    if im_arch:
+        Story.append(im_arch)
+    Story.append(Spacer(1, 12))
 
     Story.append(Paragraph("Fluxo de Funcionamento", styles['SubSection']))
     text_flow = """
