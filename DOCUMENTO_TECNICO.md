@@ -3,12 +3,12 @@
 Este documento detalha a arquitetura da aplicação, os fluxos de dados e os principais componentes de código que compõem o **Auditor Orçamento (SOF)**.
 
 ## Visão Geral
-A solução é uma aplicação **Streamlit** que orquestra múltiplos agentes conectados ao **Google Gemini** para auditar documentos orçamentários (LOA, LDO, Notas Técnicas). O usuário fornece um PDF (upload ou exemplo), o texto é extraído e distribuído para agentes especialistas, e o resultado é consolidado em abas da interface. Abaixo segue a visão didática e uma versão detalhada da arquitetura, incluindo canais de dados e dependências.
+A solução é uma aplicação **Streamlit** que utiliza uma arquitetura de múltiplos agentes baseada no **Google Gemini** para realizar a auditoria de documentos orçamentários (LOA, LDO, Notas Técnicas). O usuário submete um arquivo PDF (via upload ou exemplo integrado na ferramenta), e o conteúdo textual é extraído. Em seguida, este conteúdo é distribuído para agentes especialistas que operam em paralelo. Por fim, os resultados são consolidados e apresentados de forma organizada em abas na interface do usuário. Abaixo, detalhamos tanto a visão didática quanto a arquitetura técnica, incluindo fluxos de dados e as dependências do sistema.
 
 ## Arquitetura de Alto Nível
 ![Arquitetura Didática](architecture_didactic.png)
 
-![Arquitetura Detalhada](architecture_v3.png)
+
 
 1. **Frontend (Streamlit)**: interface única (`app.py`) para upload, execução da auditoria e exibição tabulada dos achados.
 2. **Orquestração**: `AuditorOrchestrator` paraleliza agentes de análise e depois aciona explicabilidade.
@@ -24,7 +24,7 @@ A solução é uma aplicação **Streamlit** que orquestra múltiplos agentes co
 4. **Explicabilidade**: `explainability.explain_findings` traduz achados técnicos em linguagem simples.
 5. **Apresentação**: Abas de UI exibem riscos, conformidade, inconsistências e recomendações.
 
-![Fluxo de Código e Chamadas](code_flow_didactic.png)
+
 
 ## Componentes de Código
 ### Interface (Streamlit)
@@ -42,7 +42,7 @@ Arquivo: `orchestrator.py`
 - Usa `ThreadPoolExecutor` para rodar em paralelo os três agentes analíticos (auditor, compliance, consistência) e, em seguida, envia o resumo consolidado para o agente de explicabilidade.
 - Retorna um dicionário com todos os blocos de resultados para a UI.
 
-![Diagrama de Código](code_diagram.png)
+
 
 ### Agentes Especialistas (Gemini)
 Arquivos em `agents/`
@@ -79,8 +79,8 @@ Arquivo: `utils/pdf_loader.py`
 
 ## Observabilidade e UX
 - **Feedback em tempo de execução**: `st.spinner` indica o processamento das chamadas aos agentes; erros são apresentados em `st.error` com mensagens contextualizadas.
-- **Layout Responsivo**: uso de `st.columns` e *expanders* para acomodar tabelas e textos longos; recomenda-se viewport >= 1280px para melhor legibilidade.
-- **Screenshots disponíveis**: `screenshot_home.png` e `screenshot_results.png` ilustram o fluxo completo, úteis para suporte e treinamento.
+- **Layout Responsivo**: A interface utiliza `st.columns` e *expanders* para organizar a informação, sendo otimizada para visualização em desktop (resolução recomendada >= 1280px) para garantir a legibilidade das tabelas e relatórios.
+- **Documentação Visual**: O repositório contém capturas de tela (`screenshot_home.png` e `screenshot_results.png`) que ilustram o fluxo completo de uso, servindo como material de suporte e treinamento.
 
 ## Considerações de Segurança e Limitações
 - O texto enviado ao Gemini é truncado (`text[:30000]` ou `text[:10000]` no agente de explicabilidade) para caber na janela de contexto.
@@ -91,8 +91,6 @@ Arquivo: `utils/pdf_loader.py`
 ## Diagramas Complementares
 Além do fluxo de dados didático, o repositório inclui variações de arquitetura e diagramas de código que podem ser reutilizados em apresentações técnicas:
 
-- `architecture_diagram.png`, `architecture_v2.png`, `architecture_v3.png`: alternativas visuais da arquitetura de agentes.
-- `code_diagram.png`, `code_flow_didactic.png`: visão do encadeamento de módulos e chamadas.
 - `dashboard_explainer.png`, `screenshot_home.png`, `screenshot_results.png`: capturas que ilustram a UI e o fluxo de uso.
 
 Esses recursos podem ser incorporados em relatórios ou apresentações para stakeholders técnicos e não técnicos.
